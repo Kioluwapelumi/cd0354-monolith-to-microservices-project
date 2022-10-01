@@ -7,14 +7,14 @@
 - docker build -t udagram-reverseproxy ./udagram-reverseproxy
 
 # Tagging
-- docker tag udagram-api-feed kioluwapelumi/udagram-api-feed:v1
-- docker tag udagram-api-user kioluwapelumi/udagram-api-user :v1
-- docker tag udagram-frontend kioluwapelumi/udagram-frontend:v1
-- docker tag udagram-reverseproxy kioluwapelumi/udagram-reverseproxy:v1
-# Do similar for other three images
+- docker tag udagram-api-feed pelu2002/udagram-api-feed:v1
+- docker tag udagram-api-user pelu2002/udagram-api-user :v1
+- docker tag udagram-frontend pelu2002/udagram-frontend:v1
+- docker tag udagram-reverseproxy pelu2002/udagram-reverseproxy:v1
 
+# trigger build
 - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-- docker push kioluwapelumi/udagram-api-feed:v1
-- docker push kioluwapelumi/udagram-api-user:v1
-- docker push kioluwapelumi/udagram-frontend:v1
-- docker push kioluwapelumi/udagram-reverseproxy:v1
+- docker push pelu2002/udagram-api-feed:v1
+- docker push pelu2002/udagram-api-user:v1
+- docker push pelu2002/udagram-frontend:v1
+- docker push pelu2002/udagram-reverseproxy:v1
