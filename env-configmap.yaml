@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: my-config
+data: 
+  POSTGRES_HOST: database-1.cuygcrqmezfx.us-east-2.rds.amazonaws.com
+  POSTGRES_DB: postgres
+  AWS_BUCKET: udagrampelu
+  AWS_REGION: us-east-2
+  AWS_PROFILE: default
+  POSTGRES_USERNAME: pelu
+  POSTGRES_PASSWORD: udagrampelu
+  JWT_SECRET: mynewsecret
+  URL: http://localhost:8100
