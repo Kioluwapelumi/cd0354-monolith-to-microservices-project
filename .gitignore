@@ -42,5 +42,4 @@ venv/
 !.elasticbeanstalk/*.global.yml
 Classroom_Project_Instructions/
 /Classroom_Project_Instructions/
-screenshots/
 set_env.sh
