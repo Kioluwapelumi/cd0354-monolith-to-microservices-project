@@ -27,6 +27,7 @@ spec:
             cpu: "500m" 
         ports:
         - containerPort: 80
+        type: LoadBalancer
         envFrom:
           - configMapRef:
               name: my-config
