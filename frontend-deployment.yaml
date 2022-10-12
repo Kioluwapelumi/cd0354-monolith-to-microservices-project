@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: pelu2002/udagram-frontend:v6
+        image: pelu2002/udagram-frontend:v3
         ports:
         - containerPort: 80
         

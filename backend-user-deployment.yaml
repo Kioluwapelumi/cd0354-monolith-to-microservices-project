@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: backend-user
-        image: pelu2002/udagram-api-user:v2
+        image: pelu2002/udagram-api-user:v3
         ports:
         - containerPort: 80 
         envFrom:
