@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: reverseproxy
   labels:
-    app: reverseproxy
+    service: reverseproxy
 spec:
   replicas: 1
   selector:
@@ -12,11 +12,19 @@ spec:
   template:
     metadata:
       labels:
-        app: reverseproxy
+        service: reverseproxy
     spec:
       containers:
       - name: reverseproxy
         image: pelu2002/udagram-reverseproxy:v2
+        imagePullPolicy: Always
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "1024Mi"
+            cpu: "500m" 
         ports:
         - containerPort: 80
         envFrom:
@@ -24,3 +32,4 @@ spec:
               name: my-config
           - secretRef:
               name: my-config-secret
+      restartPolicy: Always
